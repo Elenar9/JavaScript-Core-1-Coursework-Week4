@@ -8,6 +8,12 @@
 function findLongNameThatStartsWithA(names) {
   return names.startsWith("A") && input.length > 7;
 }
+function isLongNameAndStartsWithA(name) {
+  return name.length > 7 && name[0] == "A";
+}
+function findLongNameThatStartsWithA(names) {
+  return names.find(isLongNameAndStartsWithA);
+}
 
 let names = [
   "Rakesh",
